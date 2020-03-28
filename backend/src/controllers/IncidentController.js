@@ -3,7 +3,7 @@ const connection = require('../database/connection');
 module.exports = {
 
     async index(req, resp) {
-        const { page = 1} = req.query;
+        const { page = 1 } = req.query;
 
         const [count] = await connection('incidents').count();
         const incidents = await connection('incidents')
